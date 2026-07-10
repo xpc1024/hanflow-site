@@ -5,10 +5,10 @@ export function Footer({ locale }: { locale: string }) {
   const t = useTranslations('footer');
 
   const docsLinks = [
-    { href: `/${locale}/docs/quick-start`, label: 'Quick Start' },
-    { href: `/${locale}/docs/core-concepts/nodes`, label: 'Core Concepts' },
-    { href: `/${locale}/docs/web-studio/build-mode`, label: 'Web Studio' },
-    { href: `/${locale}/docs/api-reference/rest`, label: 'API Reference' },
+    { href: `/${locale}/docs/quick-start`, label: t('docsLinks.quickStart') },
+    { href: `/${locale}/docs/core-concepts/nodes`, label: t('docsLinks.coreConcepts') },
+    { href: `/${locale}/docs/web-studio/build-mode`, label: t('docsLinks.webStudio') },
+    { href: `/${locale}/docs/api-reference/rest`, label: t('docsLinks.apiReference') },
   ];
 
   return (

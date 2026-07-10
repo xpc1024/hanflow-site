@@ -17,7 +17,13 @@
     "github": "GitHub",
     "gitee": "Gitee",
     "license": "MIT/Apache-2.0",
-    "copyright": "(c) 2026 Hanflow"
+    "copyright": "(c) 2026 Hanflow",
+    "docsLinks": {
+      "quickStart": "快速开始",
+      "coreConcepts": "核心概念",
+      "webStudio": "Web Studio",
+      "apiReference": "API 参考"
+    }
   },
   "hero": {
     "eyebrow": "融合智能体框架",

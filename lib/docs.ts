@@ -13,40 +13,45 @@ export interface SidebarNode {
 }
 
 // Display order + group mapping for the docs sidebar (design spec 4).
-const GROUP_ORDER: Record<string, { title: string; files: { file: string; title: string }[] }> = {
+// Titles are localized per-locale so the sidebar follows the language switch.
+type LocaleTitle = { en: string; zh: string };
+type LocalizedFile = { file: string; title: LocaleTitle };
+type LocalizedGroup = { title: LocaleTitle; files: LocalizedFile[] };
+
+const GROUP_ORDER: Record<string, LocalizedGroup> = {
   'getting-started': {
-    title: 'Getting Started',
+    title: { en: 'Getting Started', zh: '快速开始' },
     files: [
-      { file: 'quick-start', title: 'Quick Start' },
-      { file: 'configuration', title: 'Configuration' },
+      { file: 'quick-start', title: { en: 'Quick Start', zh: '快速开始' } },
+      { file: 'configuration', title: { en: 'Configuration', zh: '配置' } },
     ],
   },
   'core-concepts': {
-    title: 'Core Concepts',
+    title: { en: 'Core Concepts', zh: '核心概念' },
     files: [
-      { file: 'core-concepts/nodes', title: '13 Primitive Nodes' },
-      { file: 'core-concepts/dsl-syntax', title: 'DSL Syntax' },
-      { file: 'core-concepts/control-flow', title: 'Control Flow' },
-      { file: 'core-concepts/model-routing', title: 'Model Routing' },
-      { file: 'core-concepts/mcp-tool-bus', title: 'MCP Tool Bus' },
-      { file: 'core-concepts/rag-retrieval', title: 'RAG Retrieval' },
+      { file: 'core-concepts/nodes', title: { en: '13 Primitive Nodes', zh: '13 个原子节点' } },
+      { file: 'core-concepts/dsl-syntax', title: { en: 'DSL Syntax', zh: 'DSL 语法' } },
+      { file: 'core-concepts/control-flow', title: { en: 'Control Flow', zh: '控制流' } },
+      { file: 'core-concepts/model-routing', title: { en: 'Model Routing', zh: '模型路由' } },
+      { file: 'core-concepts/mcp-tool-bus', title: { en: 'MCP Tool Bus', zh: 'MCP 工具总线' } },
+      { file: 'core-concepts/rag-retrieval', title: { en: 'RAG Retrieval', zh: 'RAG 检索' } },
     ],
   },
   'web-studio': {
-    title: 'Web Studio',
+    title: { en: 'Web Studio', zh: 'Web Studio' },
     files: [
-      { file: 'web-studio/build-mode', title: 'Build Mode' },
-      { file: 'web-studio/monitor-mode', title: 'Monitor Mode' },
-      { file: 'web-studio/hitl-approvals', title: 'HITL Approvals' },
+      { file: 'web-studio/build-mode', title: { en: 'Build Mode', zh: 'Build 模式' } },
+      { file: 'web-studio/monitor-mode', title: { en: 'Monitor Mode', zh: 'Monitor 模式' } },
+      { file: 'web-studio/hitl-approvals', title: { en: 'HITL Approvals', zh: 'HITL 审批' } },
     ],
   },
   'api-reference': {
-    title: 'API Reference',
+    title: { en: 'API Reference', zh: 'API 参考' },
     files: [
-      { file: 'api-reference/rest', title: 'REST Endpoints' },
-      { file: 'api-reference/websocket', title: 'WebSocket Events' },
-      { file: 'api-reference/webhooks', title: 'Webhook Triggers' },
-      { file: 'api-reference/error-codes', title: 'Error Codes' },
+      { file: 'api-reference/rest', title: { en: 'REST Endpoints', zh: 'REST 端点' } },
+      { file: 'api-reference/websocket', title: { en: 'WebSocket Events', zh: 'WebSocket 事件' } },
+      { file: 'api-reference/webhooks', title: { en: 'Webhook Triggers', zh: 'Webhook 触发' } },
+      { file: 'api-reference/error-codes', title: { en: 'Error Codes', zh: '错误码' } },
     ],
   },
 };
@@ -67,15 +72,16 @@ export function buildSidebarTree(
   const exists = (rel: string) => existsSync(path.join(base, `${rel}.mdx`));
 
   const out: SidebarNode[] = [];
+  const lang: 'en' | 'zh' = locale === 'zh' ? 'zh' : 'en';
   for (const key of GROUP_KEYS) {
     const group = GROUP_ORDER[key];
     const items: SidebarItem[] = [];
     for (const f of group.files) {
       if (exists(f.file)) {
-        items.push({ title: f.title, slug: f.file });
+        items.push({ title: f.title[lang], slug: f.file });
       }
     }
-    if (items.length > 0) out.push({ title: group.title, items });
+    if (items.length > 0) out.push({ title: group.title[lang], items });
   }
   return out;
 }

@@ -17,7 +17,13 @@
     "github": "GitHub",
     "gitee": "Gitee",
     "license": "MIT/Apache-2.0",
-    "copyright": "(c) 2026 Hanflow"
+    "copyright": "(c) 2026 Hanflow",
+    "docsLinks": {
+      "quickStart": "Quick Start",
+      "coreConcepts": "Core Concepts",
+      "webStudio": "Web Studio",
+      "apiReference": "API Reference"
+    }
   },
   "hero": {
     "eyebrow": "Fusion Agent Framework",
