@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <rect width="1200" height="750" fill="#09090b"/>
+  <g font-family="monospace" fill="#a1a1aa">
+    <rect x="120" y="160" width="180" height="64" rx="8" fill="#18181b" stroke="#27272a"/>
+    <text x="138" y="198" font-size="14">LLM</text>
+    <rect x="420" y="160" width="180" height="64" rx="8" fill="#18181b" stroke="#27272a"/>
+    <text x="438" y="198" font-size="14">Tool</text>
+    <rect x="720" y="160" width="180" height="64" rx="8" fill="#18181b" stroke="#06b6d4"/>
+    <text x="738" y="198" font-size="14" fill="#06b6d4">HITL</text>
+    <rect x="420" y="360" width="180" height="64" rx="8" fill="#18181b" stroke="#27272a"/>
+    <text x="438" y="398" font-size="14">Knowledge</text>
+    <path d="M300 192 H420" stroke="#3f3f46"/>
+    <path d="M600 192 H720" stroke="#3f3f46"/>
+    <path d="M510 224 V360" stroke="#3f3f46"/>
+  </g>
+</svg>
