@@ -1,6 +1,8 @@
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '../../i18n';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
 
 const locales = ['en', 'zh'] as const;
 
@@ -16,7 +18,9 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider>
-      {children}
+      <Navbar locale={locale} />
+      <main className="min-h-[100dvh] pt-16">{children}</main>
+      <Footer locale={locale} />
     </NextIntlClientProvider>
   );
 }
