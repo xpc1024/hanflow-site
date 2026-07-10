@@ -1,4 +1,5 @@
 import { Hero } from '@/components/landing/Hero';
+import { Features } from '@/components/landing/Features';
 
 export default async function LocaleHomePage({
   params,
@@ -6,5 +7,10 @@ export default async function LocaleHomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return <Hero locale={locale} />;
+  return (
+    <>
+      <Hero locale={locale} />
+      <Features />
+    </>
+  );
 }
