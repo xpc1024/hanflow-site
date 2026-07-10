@@ -1,5 +1,6 @@
 import { Hero } from '@/components/landing/Hero';
 import { Features } from '@/components/landing/Features';
+import { Architecture } from '@/components/landing/Architecture';
 
 export default async function LocaleHomePage({
   params,
@@ -11,6 +12,7 @@ export default async function LocaleHomePage({
     <>
       <Hero locale={locale} />
       <Features />
+      <Architecture />
     </>
   );
 }
