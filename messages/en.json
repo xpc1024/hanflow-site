@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "docs": "Docs",
+    "source": "Source",
+    "sourceGithub": "GitHub",
+    "sourceGitee": "Gitee",
+    "donate": "Donate",
+    "version": "Version",
+    "language": "Language"
+  },
+  "footer": {
+    "tagline": "Harmony AI Nexus",
+    "docs": "Docs",
+    "source": "Source",
+    "donate": "Donate",
+    "community": "Community",
+    "github": "GitHub",
+    "gitee": "Gitee",
+    "license": "MIT/Apache-2.0",
+    "copyright": "(c) 2026 Hanflow"
+  },
+  "hero": {
+    "eyebrow": "Fusion Agent Framework",
+    "title": "Build agent workflows with privacy routing, RAG, and observability.",
+    "subtitle": "A 13-node canvas, DSL orchestration, and a six-layer runtime. Open source. Self-hosted.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "View Source"
+  },
+  "features": {
+    "eyebrow": "Capabilities",
+    "title": "Everything you need to ship agents.",
+    "items": {
+      "canvas": { "title": "13-node canvas", "desc": "Compose Sequential, Parallel, Loop, Branch, HITL, LLM, Tool, Research, Execution, Coordinator, Memory, Subworkflow, and Knowledge nodes." },
+      "dsl": { "title": "DSL orchestration", "desc": "Declarative YAML with depends_on, conditions, retries, and per-node error policies. Acyclic DAG, compiled and validated." },
+      "privacy": { "title": "Privacy routing", "desc": "Sensitivity tiers and PII detection route regulated workloads to local models. Hard or soft enforcement." },
+      "mcp": { "title": "MCP tool bus", "desc": "A unified bus over stdio, sse, http, websocket, and in-process transports, with rate limiting and destructive guards." },
+      "rag": { "title": "RAG retrieval", "desc": "Vector, fulltext, and hybrid search with RRF, weighted, and cascade fusion. Pluggable embeddings and rerankers." },
+      "studio": { "title": "Web Studio", "desc": "Build, Monitor, and HITL modes. A live canvas, trace timeline, and approval panel with countdown." }
+    }
+  },
+  "architecture": {
+    "eyebrow": "Architecture",
+    "title": "Six layers, one runtime.",
+    "layers": {
+      "l1": { "name": "L1 Delivery", "desc": "REST, WebSocket, Webhooks" },
+      "l2": { "name": "L2 Orchestration", "desc": "Compiler, registry, executors" },
+      "l3": { "name": "L3 Capabilities", "desc": "Atoms: research, execution" },
+      "l4": { "name": "L4 Foundation", "desc": "Models, tools, retrieval, memory" },
+      "l5": { "name": "L5 Persistence", "desc": "Checkpoint, session, artifact" },
+      "l6": { "name": "L6 Observability", "desc": "Trace, metrics, logs" }
+    }
+  },
+  "quickdemo": {
+    "eyebrow": "Quick Demo",
+    "title": "Running in three steps.",
+    "steps": {
+      "clone": { "title": "Clone", "desc": "Get the repo and copy the example config." },
+      "configure": { "title": "Configure", "desc": "Set your model keys in .env." },
+      "run": { "title": "Run", "desc": "Bring up the full stack with one command." }
+    }
+  },
+  "cta": {
+    "title": "Start building.",
+    "installLabel": "Install",
+    "copied": "Copied"
+  },
+  "donate": {
+    "title": "Support Hanflow",
+    "subtitle": "If Hanflow helps your work, consider supporting its development.",
+    "wechat": "WeChat",
+    "alipay": "Alipay",
+    "paypal": "PayPal",
+    "contact": "Contact",
+    "thanks": "Thank you for your support."
+  },
+  "docs": {
+    "onThisPage": "On this page",
+    "previous": "Previous",
+    "next": "Next",
+    "notFound": "This page could not be found."
+  }
+}

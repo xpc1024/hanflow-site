@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "docs": "文档",
+    "source": "源码",
+    "sourceGithub": "GitHub",
+    "sourceGitee": "Gitee",
+    "donate": "捐赠",
+    "version": "版本",
+    "language": "语言"
+  },
+  "footer": {
+    "tagline": "Harmony AI Nexus",
+    "docs": "文档",
+    "source": "源码",
+    "donate": "捐赠",
+    "community": "社区",
+    "github": "GitHub",
+    "gitee": "Gitee",
+    "license": "MIT/Apache-2.0",
+    "copyright": "(c) 2026 Hanflow"
+  },
+  "hero": {
+    "eyebrow": "融合智能体框架",
+    "title": "隐私路由、RAG 与可观测性一体的智能体工作流。",
+    "subtitle": "13 节点画布、DSL 编排与六层运行时。开源，可自托管。",
+    "ctaPrimary": "快速开始",
+    "ctaSecondary": "查看源码"
+  },
+  "features": {
+    "eyebrow": "核心能力",
+    "title": "交付智能体所需的一切。",
+    "items": {
+      "canvas": { "title": "13 节点画布", "desc": "组合 Sequential、Parallel、Loop、Branch、HITL、LLM、Tool、Research、Execution、Coordinator、Memory、Subworkflow、Knowledge 节点。" },
+      "dsl": { "title": "DSL 编排", "desc": "声明式 YAML，含 depends_on、condition、retry 与节点级错误策略。无环 DAG，编译期校验。" },
+      "privacy": { "title": "隐私路由", "desc": "敏感度分级与 PII 识别把受监管负载路由到本地模型，支持硬/软强制。" },
+      "mcp": { "title": "MCP 工具总线", "desc": "统一总线，覆盖 stdio、sse、http、websocket 与进程内传输，带限流与破坏性操作保护。" },
+      "rag": { "title": "RAG 检索", "desc": "向量、全文与混合检索，含 RRF、加权、级联三种融合。可插拔嵌入与重排。" },
+      "studio": { "title": "Web Studio", "desc": "Build、Monitor、HITL 三模式。实时画布、trace 时间线与带倒计时的审批面板。" }
+    }
+  },
+  "architecture": {
+    "eyebrow": "架构",
+    "title": "六层，一个运行时。",
+    "layers": {
+      "l1": { "name": "L1 Delivery", "desc": "REST / WebSocket / Webhooks" },
+      "l2": { "name": "L2 Orchestration", "desc": "编译器 / 注册表 / 执行器" },
+      "l3": { "name": "L3 Capabilities", "desc": "原子能力：research / execution" },
+      "l4": { "name": "L4 Foundation", "desc": "模型 / 工具 / 检索 / 记忆" },
+      "l5": { "name": "L5 Persistence", "desc": "checkpoint / session / artifact" },
+      "l6": { "name": "L6 Observability", "desc": "trace / metrics / logs" }
+    }
+  },
+  "quickdemo": {
+    "eyebrow": "快速演示",
+    "title": "三步即可运行。",
+    "steps": {
+      "clone": { "title": "克隆", "desc": "获取仓库并复制示例配置。" },
+      "configure": { "title": "配置", "desc": "在 .env 填写模型密钥。" },
+      "run": { "title": "运行", "desc": "一条命令拉起全栈。" }
+    }
+  },
+  "cta": {
+    "title": "开始构建。",
+    "installLabel": "安装",
+    "copied": "已复制"
+  },
+  "donate": {
+    "title": "支持 Hanflow",
+    "subtitle": "如果 Hanflow 对你有帮助，欢迎支持它的开发。",
+    "wechat": "微信",
+    "alipay": "支付宝",
+    "paypal": "PayPal",
+    "contact": "联系方式",
+    "thanks": "感谢你的支持。"
+  },
+  "docs": {
+    "onThisPage": "本页内容",
+    "previous": "上一页",
+    "next": "下一页",
+    "notFound": "找不到该页面。"
+  }
+}
